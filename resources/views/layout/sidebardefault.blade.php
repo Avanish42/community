@@ -49,10 +49,10 @@
                     </a>
                     <ul class="ml-menu">
                         <li class="{{(isset($sub_page) && $sub_page && $sub_page=='pending-order')?'active':''}}">
-                            <a href="{{ url('/order/pending-order')  }}">Create Topic</a>
+                            <a href="{{ url('/Fourm/create')  }}">Create Topic</a>
                         </li>
                         <li class="{{(isset($sub_page) && $sub_page && $sub_page=='order-history')?'active':''}}">
-                            <a href="{{ url('/order/order-history')  }}">
+                            <a href="{{ url('/Fourm')  }}">
                                 Show Tpoic
                             </a>
 
@@ -60,11 +60,22 @@
                     </ul>
                 </li>
 
-                <li class="{{(isset($page) && $page && $page=='customer')?'active':''}}">
-                    <a href="{{url('/customer')}}">
-                        <i class="material-icons">group</i>
-                        <span>Customers</span>
+                <li class="{{(isset($page) && $page && $page=='orders')?'active':''}}">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">toc</i>
+                        <span>Users</span>
                     </a>
+                    <ul class="ml-menu">
+                        <li class="{{(isset($sub_page) && $sub_page && $sub_page=='pending-order')?'active':''}}">
+                            <a href="{{ url('/User/login')  }}">Create Users</a>
+                        </li>
+                        <li class="{{(isset($sub_page) && $sub_page && $sub_page=='order-history')?'active':''}}">
+                            <a href="{{ url('/User')  }}">
+                                Show User
+                            </a>
+
+                        </li>
+                    </ul>
                 </li>
 
 
@@ -75,10 +86,10 @@
                     </a>
                     <ul class="ml-menu">
                         <li class="{{(isset($sub_page) && $sub_page && $sub_page=='add-category')?'active':''}}">
-                            <a href="{{ url('/category')  }}">Create Poll</a>
+                            <a href="{{ url('/Poll/create')  }}">Create Poll</a>
                         </li>
                         <li class="{{(isset($sub_page) && $sub_page && $sub_page=='view-category')?'active':''}}">
-                            <a href="{{ url('/category/view-all-category')  }}">
+                            <a href="{{ url('/Poll')  }}">
                                 Show Poll
                             </a>
 

@@ -16,14 +16,41 @@ Route::get('/', function () {
 });
 
 Route::get('/test',function(){
-
     return view('test');
 });
 
 Route::group(['prefix'=>"User", 'namespace'=>'User'],function(){
 
     Route::get('/','RegistrationController@index');
-    
-    
+    Route::get('/login','RegistrationController@login');
+    Route::post('/store','RegistrationController@store');
+
 });
+
+Route::group(['prefix'=>'Forum','namespace'=>'Admin'],function(){
+
+    Route::get('/','ForumController@index');
+    Route::get('/create','ForumController@create');
+
+});
+
+Route::group(['prefix'=>'Poll','namespace'=>'Admin'],function(){
+
+    Route::get('/','PollController@index');
+    Route::get('/create','PollController@create');
+    Route::post('/store','PollController@store');
+
+});
+
+
+Route::group(['prefix'=>'Fourm','namespace'=>'Admin'],function(){
+
+    Route::get('/','ForumController@index');
+    Route::post('/store','ForumController@store');
+    Route::get('/create','ForumController@create');
+
+
+});
+
+
 

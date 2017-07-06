@@ -2,24 +2,26 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ForumController extends Controller
+class PollController extends Controller
 {
+
 
     public function index()
     {
-        return view('Fourm/show');
+        return view('poll/show');
+
     }
     public function create()
     {
-        return view('Fourm/create');
+        return view('poll/create');
+
     }
     public function store(Request $request)
     {
         dd($request);
 
     }
-
 }
