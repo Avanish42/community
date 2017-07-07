@@ -6,12 +6,10 @@ use App\Mail\Samyotech;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 Use App\Model\People;
-
 use Illuminate\Support\Facades\Mail;
-
 class RegistrationController extends Controller
 {
-    //
+
 
     public function index()
     {
@@ -28,12 +26,14 @@ class RegistrationController extends Controller
 
     {
         $people = new People();
-        dd($request);
+
         $people->email=$request->email;
         $people->mobile=$request->mobile;
         $people->password=bcrypt($request->password);
-        dd($request->toArray());
+    //    dd($people->toArray());
 
+        $people->save();
+        return back()->with('returnStatus', true)->with('status', 101)->with('message', 'Category Added successfully');
     }
 
 

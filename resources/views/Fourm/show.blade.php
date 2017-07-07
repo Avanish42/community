@@ -27,16 +27,26 @@
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>test</th>
+                                    <th>Id</th>
+                                    <th>Tpoic</th>
+                                    <th>Details</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                    <th>Show Comment</th>
                                 </tr>
                                 </thead>
-
-
+                                <tbody>
+                                @foreach($data as $d)
+                                    <tr>
+                                        <td>{{$d['id'] }}</td>
+                                        <td>{{$d['title'] }}</td>
+                                        <td>{{$d['details'] }}</td>
+                                        <td>edit</td>
+                                        <td>delete</td>
+                                        <td>sowcomment</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
                             </table>
                         </div>
                     </div>

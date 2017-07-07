@@ -24,19 +24,19 @@
 
                         </div>
                         <div class="body">
-                            <form method="post" action="{{url('/User/store')}}">
+                            <form method="post" action="{{url('/Fourm/store')}}">
 
                                 {{csrf_field()}}
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input name ='email' type="text" id="email_address" class="form-control" required>
+                                        <input name ='title'  type="text" id="email_address" class="form-control" required>
                                         <label class="form-label">Topic Title</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input name='Topic details' type="text" id="email_address" class="form-control"  required>
+                                        <input name='details' type="text" id="email_address" class="form-control"  required>
                                         <label class="form-label">Topic Details</label>
                                     </div>
                                 </div>

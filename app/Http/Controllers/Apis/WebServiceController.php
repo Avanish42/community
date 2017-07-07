@@ -8,9 +8,13 @@ use App\Http\Controllers\Controller;
 class WebServiceController extends Controller
 {
     //
-    public function index()
-
+    public function login(Request $request)
     {
-       return  view('Api/all_apis');
+
+        dd($request);
+
     }
+
+
+
 }

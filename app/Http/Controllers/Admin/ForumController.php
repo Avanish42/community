@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Model\Forum;
 class ForumController extends Controller
 {
 
     public function index()
     {
-        return view('Fourm/show');
+
+        $data=Forum::all()->toArray();
+//        dd($data);
+        return view('Fourm/show',compact("data"));
     }
     public function create()
     {
@@ -18,7 +21,11 @@ class ForumController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request);
+        $forum=new Forum();
+        $forum->title=$request->title;
+        $forum->details= $request->details;
+        $forum->save();
+        redirect('Fourm');
 
     }
 

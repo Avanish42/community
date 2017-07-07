@@ -17,7 +17,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::group(['prefix'=>'Allapi', 'namespace'=>'Apis'],function(){
+
+    Route::get('/','ApiDetailsController@index');
+    Route::get('/login','ApiDetailsController@login');
+});
+
+
 Route::group(['namespace'=>'Apis'],function(){
 
-    Route::get('/','WebServiceController@index');
+    Route::get('/login','WebServiceController@login');
 });

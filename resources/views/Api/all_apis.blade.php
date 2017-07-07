@@ -21,7 +21,7 @@
     <div>
         <p>   </p>
 
-        <p><a href="">Login</a></p>
+        <p><a href="{{url('/api/Allapi/login')}}">Login</a></p>
         <p><a href="">editprofile</a></p>
         <p><a href="">Question</a></p>
 
